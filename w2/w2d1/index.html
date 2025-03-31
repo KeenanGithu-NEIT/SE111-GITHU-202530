@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--why do comments look like this-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="K Githu">
+    <meta name="description" content="W2D1 Demo">
+
+    <title>Week 2 | Demo 1</title>
+</head>
+<body>
+    <p>Take us to the <a href="#w2">bottom</a> of the page.</p>
+    <!--body element holds all content-->
+    <!--these still look awful-->
+    <!--Block Level Elements: building blocks of page! create main structure (both organizational and content-wise)-->
+
+    <!--headings [1-6] are just like heading styles in Word-->
+    <h1 id="top" style="border: 1px solid red">Heading 1</h1> <!--ONLY ONE PER PAGE for SEO-->
+    <h2 style="border: 1px solid green">Heading 2</h2>
+    <h3 style="border: 1px solid blue">Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    
+    <!--HORIZONTAL RULE BELOW <h4> : creates separation between sections of page-->
+    <hr>
+
+    <!--DIVs are dividers/divisions - they do not contain content, they contain and help organize other HTML elements-->
+    <div style="background-color: grey; color: white;">
+        <h2 id="list">List Types in HTML</h2>
+
+        <!--ordered list-->
+        <ol>
+            <!--add a list item for each line item in the list-->
+            <li>Games</li>
+            <li>Programming</li>
+            <li>Sleeping</li>
+        </ol>
+
+        <!--unordered list-->
+        <ul>
+            <!--add a list item for every item in the list-->
+            <li>Drogon</li>
+            <li>Rhaegal</li>
+            <li>Viserion</li>
+        </ul>
+
+    </div>
+
+    <hr>
+
+    <h2>Basic Paragraph Text + In-Line Tags</h2>
+
+    <!--in-line elements do NOT create structure, they are used *in line* of another HTML element!
+    they usually add visual style or emphasis, help support SEO, or support data management-->
+
+    <!--<p> for paragraph (block level element)-->
+    <p>Hello my name is <b>Keenan</b> <br> <!--creates a new empty line-->
+        and I <i>hate</i> HTML <u>comments</u>.</p>
+
+    <!--in-lines for SEO support (Search Engine Optimization)-->
+    <p>The <strong>strong</strong> tage makes content appear bold.</p>
+    <p>The <em>emphasis</em> tag makes content appear italicized.</p>
+
+    <p><b><i><u>C O M B O</u></i></b></p>
+
+    <hr>
+
+    <!--continuing to week 2 with basic tags-->
+    <h2 id="W2" >W2D1 - Intro to img, a, and id attributes.</h2>
+    
+    <!--add a link to neit.edu-->
+    <!--this is an example of an ABSOLUTE PATH (starts with protocol)-->
+
+    <h4>Check out my school's website: <a href="https://www.neit.edu" target="_blank">neit.edu</a></h4>
+
+    <!--target="_blank" opens the link in a new tab-->
+
+    <!--link to our W1 demo webpage-->
+    <!--since this week2 folder lives within a larger "se111" folder, we can create RELATIVE paths to other content housed within "SE111_202530"-->
+    <p>My first HTML demo can be found <a href="../../week1/demo/index.html" target="_blank">here</a> for your review.</p>
+    
+    <!--in page "jump" link below; utilizes #idValue-->
+    <p>Take us back to the <a href="#top">top</a> of the page</p>
+    <p>Take us back to the <a href="#list">list</a> of the page</p>
+
+    <h2>Images!</h2>
+
+    <!--it is always safest to use RELATIVE file paths with our image content (these are resources that live directly in our website's root folder)-->
+    <img src="images/meca.jpg" alt="The front entrance of MECA's Porteous Building" width="500px" title="MECA!">
+</body>
+</html>
