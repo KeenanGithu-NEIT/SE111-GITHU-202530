@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Keenan Githu">
+    <meta name="description" content="W3D1 Demo">
+
+    <title>W3 | TheLastOfUs</title>
+
+    <!--In-Document CSS below-->
+    <style>
+        /*we are now writing in CSS in this element*/
+
+        /*selecting elements by their tag type*/
+        body {
+            /*property: value;*/
+            background-color: gray;
+        }
+
+        div {
+            /*these style changes will apply to ALL divs in the page. 
+            When selecting by tag type, all tags of that type are affected*/
+
+            border: 1px solid black;
+
+            /*padding adds space between content and border*/
+            padding: 10px; /*applies to all 4 sides: top right left bottom*/
+
+            /*margin adds space between border and other elements*/
+            margin: 10px; /*applies to all 4 sides*/
+        }
+
+        /*selecting an element by its #ID*/
+        #wrapper {
+            width: 980px;
+            margin: auto; /*auto equal left and right space when width is applied*/
+
+            background-color: rgb(41,41,41);
+            color: white; /*Color changes FONT color*/
+        }
+
+        /*selecting a group by their .class name*/
+        .border{
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- #wrapper div to wrap around all content of the page-->
+     <div id="wrapper">
+
+        <!--HEADER-->
+        <div id="header" class="border fancy">
+            <h1 id="title">The Last of Us</h1>
+
+        </div><!--/ #header-->
+
+        <!--NAV-->
+        <div id="nav">
+
+            <!--use relative link paths for pages inside of your site-->
+            <a href="index.html" class="link">HOME</a>
+            <a href="about.html" class="link">ABOUT</a>
+            <a href="people.html" class="link">PEOPLE</a>
+            <a href="places.html" class="link">PLACES</a>
+
+        </div><!--/ #nav-->
+
+        <!--CONTENT-->
+        <div id="content">
+
+            <h2>People Page</h2>
+
+            <img src="images/ep2.jpg" alt="still from The Last of Us" style="width: 100%;">
+
+
+        </div><!--/ #content-->
+
+        <!--FOOTER-->
+        <div id="footer" class="border">
+            <a href="#wrapper">Back to Top</a> 
+            <p>&copy; Keenan Githu | SE111 | Spring 2025</p>
+
+        </div><!--/ #footer-->
+
+
+     </div> <!--/ #wrapper-->
+</body>
+</html>
