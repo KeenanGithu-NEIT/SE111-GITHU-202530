@@ -19,8 +19,42 @@
             text-align: center;
         }
 
+        #nav {
+            border-radius: 100px;
+        }
+
+        #buttons {
+            height: 50px;
+
+            width: 510px;
+            margin: auto;
+        }
+
         .navigation {
-            word-spacing: 20%;
+            width: 150;
+            height: 50;
+
+            text-align: center;
+            line-height: 50px;
+
+            background-color: grey;
+
+            float: left;
+            display: block;
+
+            margin-right: 10px;
+            margin-left: 10px;
+
+            text-decoration: none;
+
+            font-size: 24px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navigation:hover {
+            background-color: blue;
+            color: grey;
         }
     </style>
 </head>
@@ -34,10 +68,11 @@
         <hr>
 
         <div id="nav">
+            <div id="buttons">
             <a href="index.html" class="navigation">Home</a>
             <a href="cast.html" class="navigation">Cast</a>
             <a href="review.html" class="navigation">Review</a> <br>
-            <a href="#footer">Jump to Bottom</a>
+            </div>
         </div> <!--#nav-->
         <hr> 
 
