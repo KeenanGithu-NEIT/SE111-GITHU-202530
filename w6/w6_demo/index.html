@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Keenan Githu">
+    <meta name="description" content="W6D1 - Intro to JS">
+    <title>W6D1 | JS Intro</title>
+</head>
+<body>
+    <!--aim to have some sort of HTML in the file to load when we launch in browser-->
+    <h1>Week 6 Intro Demo | JavaScript</h1>
+
+    <!--IN DOCUMENT JAVASCRIPT BELOW!-->
+    <script>
+        // JS
+
+        //single line commenting
+        /*
+        multi line commenting
+        */
+
+        var num1 = 10
+        //once a name is declared, then it can be defined
+
+        var num2 = 7
+
+        //cannot use num1 or num2 until they're declared and defined
+
+        var sum = num1 + num2
+        console.log(sum) //console.log() is used only in developer tools, not for user
+
+        //alert() allows for a pop-up in the browser page to display data
+        //like print() for the user
+
+        alert(`The sum is ${sum}`)
+        //`` denotes a literal string --> similar to f"" in Python
+        //alert() will stop any script functionality afterwards until "OK" is clicked
+
+        console.log(`hello there! the sum is ${sum}`)
+        //no physical display with console.log to user
+
+        /*to access console via dev tools
+            *F12 or right-click --> inspect element
+            *choose CONSOLE tab at top right
+            *Refresh page
+        */
+
+        //prompt() --> prompts the user for a value; just like alert(), waits for enter or OK
+        //prompt() is like Python's input()
+        prompt(`Enter your first name: `)
+
+        //store a value from prompt
+        var name = prompt(`Enter your last name: `)
+        alert(`Hi there, ${name}`)
+        console.log(name)
+        
+
+        //convert prompt() response from string data to number data:
+        var num = Number(prompt(`Enter a number to square: `))
+
+        var square = num * num
+        console.log(square.toFixed(2))
+
+    </script>
+</body>
+</html>
