@@ -9,60 +9,73 @@
 
     <style>
         /*CSS stuff*/
+
+        .text {
+            color: white;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        p {
+            color: white;
+        }
+
+        #summary {
+            margin: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        body {
+            background-color: rgb(30, 30, 30);
+        }
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
+            border-radius: 10px;
+            width: 50%;
         }
 
-        h2 {
+        .major {
             text-align: center;
         }
 
         #nav {
-            border-radius: 100px;
+            margin: auto;
+            text-align: center;
         }
 
         #buttons {
             height: 50px;
-
-            width: 510px;
-            margin: auto;
+            width: 100%;
         }
 
         .navigation {
-            width: 150;
-            height: 50;
-
-            text-align: center;
-            line-height: 50px;
-
-            background-color: grey;
-
-            float: left;
-            display: block;
-
-            margin-right: 10px;
-            margin-left: 10px;
-
+            margin-right: 15px;
             text-decoration: none;
+            font-size: 30px;
 
-            font-size: 24px;
-            
-            font-family: Arial, Helvetica, sans-serif;
+            background-color: gainsboro;
+            border-radius: 6px;
+
         }
 
         .navigation:hover {
             background-color: blue;
             color: grey;
         }
+
+        
     </style>
 </head>
 <body>
     <div id="container">
 
         <div id="header">
-            <h1>The Matrix</h1>
+            <h1 class="major text"><em>The Matrix</em></h1>
         </div> <!--#header-->
 
         <hr>
@@ -77,10 +90,10 @@
         <hr> 
 
         <div id="content">
-            <h2><strong>HOME</strong></h2>
-            <img src="images/matrix_poster.jpg" alt="The Matrix poster" width="50%">
+            <h2 class="major text"><strong>HOME</strong></h2>
+            <img src="images/matrix_poster.jpg" alt="The Matrix poster">
 
-            <p>The Matrix is a movie about a dystopian future in which machines trap people inside of a simulation of reality called the Matrix. Believed to be "the One" who will defeat the machines, computer hacker Neo is recruited by a man named Morpheus to rebel against them.</p>
+            <p id="summary"><em>The Matrix</em> is a movie about a dystopian future in which machines trap people inside of a simulation of reality called the Matrix. Believed to be "the One" who will defeat the machines, computer hacker Neo is recruited by a man named Morpheus to rebel against them.</p>
 
         </div> <!--#content-->
 
@@ -91,6 +104,7 @@
             <p><em>&copy; Keenan Githu, Spring 2025</em></p>
 
             <!--VALIDATION IMAGE GOES HERE-->
+            <img src="images/home_validation.png" alt="Home Page Validation">
 
         </div> <!--#footer-->
     </div> <!--#container-->
