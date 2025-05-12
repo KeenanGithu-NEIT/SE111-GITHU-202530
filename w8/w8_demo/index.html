@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W8 | Data Structures</title>
+</head>
+<body>
+    <h1>W8 - Data Structures</h1>
+    <h3>Arrays, Associative Arrays, and Objects</h3>
+
+    <div id="output">
+        <!--this div will hold content created in JS and written to the page here-->
+
+    </div>
+    <!--JS-->
+    <script>
+        //Standard Arrays-------------
+
+        //creating new populated array
+        var people = [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g"
+        ]
+
+        console.log(`Array: ${people}`) //entire collection of data
+        console.log(`First value of Array: ${people[0]}`) //displays 'a'
+        //arrayName[index] --> name + key = value
+
+        //you can store a single value back into a var
+        var firstName = people[0]
+        console.log(`firstLabel in Array: ${firstName}`)
+
+        //accessing last value in array --> len() - 1
+        //all arrays are a TYPE of OBJECT which inherently have data relate properties
+        console.log(`Last Value in Array: ${people[people.length-1]}`)
+        console.log(`Total number of values in Array: ${people.length}`)
+
+        //change the first person's name in the people array
+        people[0] = "1"
+
+        //add a value to an array -- push() is a subfunction of array types - same as append
+        people.push("h")
+        console.log(`Array: ${people}`)
+
+        people.push(prompt("Pick an element to add to an array"))
+        console.log(`Array: ${people}`)
+
+        //parallel arrays
+        var faveMovies = [
+            "Empire Records",
+            "Fight Club",
+            "Interstellar",
+            "Pitch Perfect",
+            "Inception",
+            "Surf's Up!",
+            "Sinners",
+            "Alien",
+            "Fave Movies"
+        ]
+
+        //Processing through arrays
+
+        var output = document.querySelector(`#output`)
+        for(let index = 0; index < people.length; index++)
+        {
+            //first: block scope variable placeholder for key/index and starting value
+            //second: condition of loop
+            //third: incrementation of index value per loop, index++ --> index += 1
+
+            console.log(`${people[index]}'s favorite movie is ${faveMovies[index]}`)
+
+            //write the info to the HTML's #output
+
+            output.innerHTML += `<p> ${people[index]}'s favorite movie is <i>${faveMovies[index]} </i></p>`
+        }
+
+        //Associative Arrays----------
+
+        //Objects---------------------
+
+    </script>
+    
+</body>
+</html>
