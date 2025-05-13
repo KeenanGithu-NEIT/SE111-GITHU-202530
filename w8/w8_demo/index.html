@@ -48,7 +48,7 @@
         people.push("h")
         console.log(`Array: ${people}`)
 
-        people.push(prompt("Pick an element to add to an array"))
+        people.push("i")
         console.log(`Array: ${people}`)
 
         //parallel arrays
@@ -80,10 +80,102 @@
             output.innerHTML += `<p> ${people[index]}'s favorite movie is <i>${faveMovies[index]} </i></p>`
         }
 
-        //Associative Arrays----------
-
         //Objects---------------------
+        var pets = { //creating the empty array (must be empty)
+        a: "George",
+        b: "Chopper",
+        c: "Luna",
+        d: "Daisy",
+        e: "John",
+        f: "Brody",
+        g: "Zen",
+        h1: "River",
+        i: "Kenzi",
+        h2: "Mellow"
+        }
 
+        console.log(`Pets Objects: ${pets}`) //entire object collection, just states type
+        console.log(`First Value of Array: ${pets['a']}`) //one value of object
+
+        //utilizing dot syntax to access an object's property's value
+        //objectName.propertyName
+        console.log(`Last Value: ${pets.h2}`)
+        
+        //more of a real world object example
+        var playerCharacter = {
+            name: "John",
+            class: "Druid",
+            wildshape: "Tiger",
+            age: 2,
+            hp: 26,
+            level: 1,
+            spells: ["Shellelagh", "Ice Knife", "Speak to Animals"],
+
+            //this is how a method is born
+            greeting: function() {
+                alert(`I am ${this.name}, hear me stab.`)
+            }
+        }
+
+        //add a value to the playerCharacter
+        playerCharacter.damage = 3
+
+        //processing through objects --> for in loop needed
+        for(let key in playerCharacter) {
+            //key == property
+            //for every property in the object, do the following
+
+            console.log(`${key}: ${playerCharacter[key]}`)
+        }
+
+        var enemy = {
+            name: "Johnathon",
+            class: "Skeleton",
+            age: 200,
+            hp: 16,
+            level: 5,
+            spells: ["Boo.", "Bone Pick"],
+
+            //this is how a method is born
+            greeting: function() {
+                alert(`I am ${this.name}, I'm made of bones.`)
+            },
+            damage: 5
+        }
+
+        //properties are reusuable
+        console.log(`${playerCharacter.name} is a ${playerCharacter.class}.`)
+        console.log(`${enemy.name} is a ${enemy.class}.`)
+
+        playerCharacter.greeting()
+        enemy.greeting()
+
+        //Let's put it all together. In order to process data structures populated with data structures --> we need LOOPCEPTION
+        var fight = [
+            playerCharacter, //fight[0]
+            enemy //fight[1]
+        ]
+
+        //creating an empty string to add data to during loopception
+        var dndOutput = ``
+
+        //process the data structure.
+        //main structure is a standard array, so outer for loop is set for that
+        for(let i = 0; i < fight.length; i++) {
+            //this outer for loop control which array value (object) we're doing stuff to
+            dndOutput += `<hr><h3>INFO FOR: ${fight[i].name} </h3>`
+
+            //inner loop will look at EACH KEY in the current object - fight[i]
+            for(let key in fight[i]) {
+                dndOutput += `<p><b>${key}:</b> ${fight[i][key]}</p>`
+            }
+
+            dndOutput += `<hr>`
+        }
+
+        //write the input to the #output div
+        output.innerHTML += dndOutput
+        //document.querySelector(`#output`).innerHTML += newOutput
     </script>
     
 </body>
