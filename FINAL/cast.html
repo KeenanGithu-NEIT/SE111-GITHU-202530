@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test">Hello World!</p>
+
+    <hr>
+
+    <script>
+        var move = document.getElementById(`test`)
+        var position = 0
+        var gravity = 5
+        move.style.position = 'absolute'
+        move.style.right = '500px'
+        
+        function animate() {
+            position += gravity
+            move.style.top = position + 'px'
+            if (position < 1080) {
+                requestAnimationFrame(animate)
+                move.scrollIntoView({
+                    block: "center"
+                })
+                if (position % 10 == 0) {
+                    gravity += 0.1
+                }
+            }
+        }
+        animate()
+    </script>
+</body>
+</html>
